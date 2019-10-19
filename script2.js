@@ -1,7 +1,7 @@
 const url1 = 'https://api.exchangeratesapi.io/latest?base=USD'
 const shown = document.querySelectorAll('.active')
-console.log(shown)
 const button = document.querySelectorAll('.dropdown');
+rate = document.querySelector('.rate')
 
 fetch(url1)
     .then(res => {
@@ -24,6 +24,7 @@ fetch(url1)
                     switch (shown[i].dataset.currency) {
                         case 'EUR':
                             shown[i].innerText = res.rates.EUR
+                            rate.innerText.value = res.rates.EUR
                             break;
                         case 'JPY':
                             shown[i].innerText = res.rates.JPY
@@ -57,16 +58,20 @@ fetch(url1)
                     // shown[i].innerText = res.rates.values
                 // }
             }
+        
         }
+        for (let i = 0; i < button.length; i++) {
+            button[i].addEventListener('click', function (evt) {
+                evt.preventDefault()
+                shown[i].classList.toggle('active')
+                rate.value = shown[i].innerText
+            })
+        }
+        
     })
     .catch(err => {
         console.log("something went wrong...", err)
     })
 
-for (let i = 0; i < button.length; i++) {
-    button[i].addEventListener('click', function (evt) {
-        evt.preventDefault()
-        shown[i].classList.toggle('active')
 
-    })
-}
+
