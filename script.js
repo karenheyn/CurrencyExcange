@@ -25,7 +25,7 @@ for (let i = 0; i < button.length; i++) {
                 // asideText[0].innerHTML = object.value(res.rates)   // Ben helped debug this loop
                 for (let j = 0; j < key.length; j++) {
                         // console.log(shown2[i].dataset.currency + " " + key[j])
-                        if (key[j] === shown2[i].dataset.currency) {
+                        // if (key[j] === shown2[i].dataset.currency) {
                             console.log('active')
                             shown2[i].classList.toggle('active')       
                     }
