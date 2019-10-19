@@ -1,8 +1,10 @@
 const url1 = 'https://api.exchangeratesapi.io/latest?base=USD'
 const shown = document.querySelectorAll('.active')
 const button = document.querySelectorAll('.dropdown');
-rate = document.querySelector('.rate')
-
+const rate = document.querySelector('.rate')
+const myTotal = document.querySelector('.total')
+const submit = document.querySelector('.submit')
+const amount = document.querySelector('.amount')
 fetch(url1)
     .then(res => {
         return res.json()
@@ -67,11 +69,21 @@ fetch(url1)
                 rate.value = shown[i].innerText
             })
         }
+        submit.addEventListener('click', function(evt){
+            evt.preventDefault()
+            console.log(evt.target)
+            calculate(rate.value,amount.value)
+            myTotal.innerText = total.toFixed(2);
+        })
         
     })
     .catch(err => {
         console.log("something went wrong...", err)
     })
+calculate = function(amt,rate){
+    total = amt * rate ;
+    return total
+}
 
 
 
