@@ -1,24 +1,75 @@
+body {
+    widows: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden
+ 
+ }
 .main {
     display: flex;
     flex-direction: row;
-    flex: 2;
-    justify-content: space-around;
+    /* flex: 2; */
+    justify-content: flex-start;
+    font-family: 'Strait', sans-serif;
+    padding: 0px;
+    margin: 0px;
+    background-image: url(Coins.jpg);
+    background-size: 100%;
+}
+form > label, form > input, button{
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+form{
+    padding-top: 1em;
 }
 header {
     text-align: center;
     height: 70px;
+    color: rgb(2, 83, 2);
+    /* background-image: url(Coins.jpg) ; */
+    background-size: 40em;
+     margin: 0px;
+    padding: 0px; 
+}
+.contents{
+    display: flex;
+    flex-direction: column;
+    width: 100em;
+    align-items: center;
 }
 h1 {
     font-size: 30px;
+    font-family: 'Bungee', cursive, sans-serif;
 }
-.contents, aside {
-    margin: 40px;
+.dropdown{
+    text-decoration: none;
 }
 li {
     list-style: none;
-    margin-bottom: 20px;
+    margin-bottom: 35%;
+    padding:0
 }
 
 .active{
-    display:none
+    display:none;
+}
+img{
+    max-width: 20em;
+    height: auto;
+    border-radius:50%;
+    margin-top:1em;
+}
+input {
+    border-radius: 3px;
+    border-color: rgb(122, 138, 121);
+}
+aside{
+    margin-top:0;
+}
+.dropdown{
+    color:white;
+    /* font-size: 30px; */
+    
 }

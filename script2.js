@@ -73,7 +73,7 @@ fetch(url1)
             evt.preventDefault()
             console.log(evt.target)
             calculate(rate.value,amount.value)
-            myTotal.innerText = total.toFixed(2);
+            myTotal.innerText = 'your total is: ' + total.toFixed(2);
         })
         
     })
