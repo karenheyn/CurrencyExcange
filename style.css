@@ -1,21 +1,16 @@
 body {
-    widows: 100%;
-    height: 100%;
     margin: 0px;
     padding: 0px;
-    overflow-x: hidden
- 
+    background-color:rgb(183,104,89);
  }
 .main {
     display: flex;
     flex-direction: row;
-    /* flex: 2; */
-    justify-content: flex-start;
     font-family: 'Strait', sans-serif;
     padding: 0px;
     margin: 0px;
-    background-image: url(Coins.jpg);
-    background-size: 100%;
+    background-image: url(./currency_img.jpg);
+    background-size: 180%;
 }
 form > label, form > input, button{
     margin-top: 1em;
@@ -23,53 +18,107 @@ form > label, form > input, button{
 }
 form{
     padding-top: 1em;
+    text-align: center;
+    padding-top:5em;
+
 }
 header {
     text-align: center;
     height: 70px;
-    color: rgb(2, 83, 2);
-    /* background-image: url(Coins.jpg) ; */
+    color:rgb(99,163,159);   /* background-image: url(Coins.jpg) ; */
     background-size: 40em;
-     margin: 0px;
-    padding: 0px; 
+    margin: 0px;
+    padding: 0px;
+    padding-bottom:40px;
+    border-bottom: 2px solid #e1c09a;
+    text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+    
 }
 .contents{
     display: flex;
     flex-direction: column;
     width: 100em;
     align-items: center;
+    color:whitesmoke;
+    text-shadow: -3px -3px #884d41b1;
+    font-size: 40px;
+    font-weight: 900;
+    
 }
 h1 {
     font-size: 30px;
     font-family: 'Bungee', cursive, sans-serif;
+    padding-top: 16px;
 }
 .dropdown{
     text-decoration: none;
+    margin-bottom: 0%;
+    padding:0
 }
 li {
     list-style: none;
-    margin-bottom: 35%;
-    padding:0
+    
 }
 
 .active{
     display:none;
+    color: solid white;
 }
 img{
     max-width: 20em;
     height: auto;
     border-radius:50%;
     margin-top:1em;
+    display:none;
 }
 input {
     border-radius: 3px;
-    border-color: rgb(122, 138, 121);
+    border-color: rgb(225,192,154);
 }
 aside{
     margin-top:0;
+    background-color: rgb(99,163,159);
+    text-align: center;
 }
 .dropdown{
     color:white;
     /* font-size: 30px; */
     
 }
+li{
+    color:white;
+    padding:20px;
+    border-top: 2px solid rgb(225,192,154)
+}
+button{
+    width:40%;
+    border-radius:100px;
+    height: 95px;
+    border:solid 3px rgb(225,192,154);
+    color:rgb(183,104,89);
+    font-size: 15px;
+    font-family:'Strait', sans-serif
+}
+.total{
+    text-align: center;
+}
+.bottom{
+    display: flex;
+    justify-content: center;
+    
+}
+.refs{
+    padding:20px;
+    color:rgb(99,163,159);
+    font-family: 'Bungee', cursive, sans-serif;
+    text-decoration: none;
+    
+}
+button:focus {
+    background: #e5e5e5;
+    outline: none;
+    -webkit-box-shadow: inset 0px 0px 5px #7e7e7e;
+       -moz-box-shadow: inset 0px 0px 5px#7e7e7e;
+            box-shadow: inset 0px 0px 5px #7e7e7e;
+            
+  }

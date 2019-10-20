@@ -5,6 +5,7 @@ const rate = document.querySelector('.rate')
 const myTotal = document.querySelector('.total')
 const submit = document.querySelector('.submit')
 const amount = document.querySelector('.amount')
+
 fetch(url1)
     .then(res => {
         return res.json()
@@ -73,7 +74,7 @@ fetch(url1)
             evt.preventDefault()
             console.log(evt.target)
             calculate(rate.value,amount.value)
-            myTotal.innerText = 'your total is: ' + total.toFixed(2);
+            myTotal.innerText = 'The total is: ' + total.toFixed(2);
         })
         
     })
