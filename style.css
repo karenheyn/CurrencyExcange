@@ -131,6 +131,9 @@ button:focus {
     h1{
         padding-top:1px;
     }
+    button{
+        margin-left:39px;
+    }
   }
 
         
