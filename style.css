@@ -18,7 +18,7 @@ form > label, form > input, button{
 }
 form{
     padding-top: 1em;
-    text-align: center;
+    text-align: left;
     padding-top:5em;
 
 }
@@ -62,7 +62,7 @@ li {
 
 .active{
     display:none;
-    color: solid white;
+    color: rgb(183,104,89);
 }
 img{
     max-width: 20em;
@@ -79,6 +79,7 @@ aside{
     margin-top:0;
     background-color: rgb(99,163,159);
     text-align: center;
+    color: white;
 }
 .dropdown{
     color:white;
@@ -122,3 +123,14 @@ button:focus {
             box-shadow: inset 0px 0px 5px #7e7e7e;
             
   }
+
+  @media only screen and (max-width: 600px) {
+    body {
+      widows: 400px;
+    }
+    h1{
+        padding-top:1px;
+    }
+  }
+
+        
