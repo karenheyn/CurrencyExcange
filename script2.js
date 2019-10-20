@@ -12,19 +12,9 @@ fetch(url1)
 
     })
     .then(res => {
-        console.log(res)
-        console.dir(res.rates)
-        let key = Object.keys(res.rates)
-        console.dir(res.rates)
-        console.dir(key)
-        console.log(Object.values(res.rates))
-        console.log(res.rates.EUR)
-        // console.log(shown[i].dataset.currency)
+        let key = Object.keys(res.rates) //returns key of rates
         for (i = 0; i < shown.length; i++) {
-        //     for (j = 0; j < key.length; j++) {
-                // if (key[j] === shown[i].dataset.currency) {
-                    // console.log(key[j] + shown[i].dataset.currency)
-                    switch (shown[i].dataset.currency) {
+                    switch (shown[i].dataset.currency) { //checks for match
                         case 'EUR':
                             shown[i].innerText = res.rates.EUR
                             rate.innerText.value = res.rates.EUR
@@ -56,35 +46,31 @@ fetch(url1)
                         case 'HKD':
                             shown[i].innerText = res.rates.HKD
                             break;
-
-                    // }
-                    // shown[i].innerText = res.rates.values
-                // }
             }
         
         }
-        for (let i = 0; i < button.length; i++) {
+        for (let i = 0; i < button.length; i++) { //event listener to display rate
             button[i].addEventListener('click', function (evt) {
                 evt.preventDefault()
                 shown[i].classList.toggle('active')
                 rate.value = shown[i].innerText
             })
         }
-        submit.addEventListener('click', function(evt){
+        submit.addEventListener('click', function(evt){ //event listener for calc results
             evt.preventDefault()
-            console.log(evt.target)
             calculate(rate.value,amount.value)
             myTotal.innerText = 'The total is: ' + total.toFixed(2);
         })
         
     })
     .catch(err => {
-        console.log("something went wrong...", err)
+        console.log("something went wrong..", err)
     })
-calculate = function(amt,rate){
+calculate = function(amt,rate){ //calculator function
     total = amt * rate ;
     return total
 }
 
+//Tissa helped with scoping
 
 
